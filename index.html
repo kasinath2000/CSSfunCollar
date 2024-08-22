@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun-CSSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 30px  auto;
+        }
+        input{
+            width: 200px;
+            margin: 20px auto;
+        }
+
+        .box {
+            height:15rem;
+            width: 15rem;
+            border: 1px solid #333;
+            transition: all 0.4s ease;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box"></div>
+    <input type="text">
+</body>
+<script>
+    let box = document.querySelector('.box');
+    let input = document.querySelector('input');
+    input.addEventListener("input", () => {
+        box.style.borderRadius = input.value;
+        box.style.background = input.value;
+    });
+</script>
+
+</html>
